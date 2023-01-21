@@ -5,10 +5,9 @@ namespace DMK\MkMailer\Model;
 use DMK\MkMailer\Mail\IMailAddress;
 use DMK\MkMailer\Mail\MailAddress;
 use Sys25\RnBase\Domain\Model\BaseModel;
-use Sys25\RnBase\Utility\Misc;
 use Sys25\RnBase\Utility\Strings;
 use Sys25\RnBase\Utility\TSFAL;
-use Sys25\RnBase\Utility\TYPO3;
+use tx_mkmailer_util_Misc;
 
 /***************************************************************
 *  Copyright notice
@@ -73,7 +72,7 @@ class Template extends BaseModel
             return $this->getProperty('contenthtml');
         }
 
-        $ret = Misc::getRTEText($this->getProperty('contenthtml'));
+        $ret = tx_mkmailer_util_Misc::getRTEText($this->getProperty('contenthtml'));
 
         return $ret;
     }
